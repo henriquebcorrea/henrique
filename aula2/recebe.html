@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Recebe</title>
+</head>
+<body>
+    <h1>Recebeu o nome <span id="nomeRecebido"></span></h1>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nome = params.get("nome");    
+        if (nome) {
+            document.getElementById("nomeRecebido").textContent = decodeURIComponent(nome);
+        } else {
+            document.getElementById("nomeRecebido").textContent = "Nenhum nome recebido.";
+        }
+    </script>
+</body>
+</html>

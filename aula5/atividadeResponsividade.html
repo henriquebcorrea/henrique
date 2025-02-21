@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Responsivo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark text-light">
+    <div class="container-fluid mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-8 col-sm-6">
+                <div class="card bg-danger p-4 w-100" style="max-width: 600;">
+                    <h2 class="text-center mb-4">Criação de personagem</h2>
+                    
+                    <form>
+                        <!-- nome -->
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome do personagem</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite o nome" required>
+                        </div>
+                        
+                        <!-- classe -->
+                        <div class="mb-3">
+                            <label class="form-label">Classe</label>
+                            <select class="form-select" required>
+                                <option selected disabled>Escolha sua classe</option>
+                                <option>Mago</option>
+                                <option>Guerreiro</option>
+                                <option>Ladino</option>
+                                <option>Clérigo</option>
+                            </select>
+                        </div>
+                        
+                        <!-- raça -->
+                        <div class="mb-3">
+                            <label class="form-label">Raça</label>
+                            <select class="form-select" required>
+                                <option selected disabled>Escolha sua raça</option>
+                                <option>Humano</option>
+                                <option>Elfo</option>
+                                <option>Anão</option>
+                                <option>Orc</option>
+                            </select>
+                        </div>
+                        
+                        <!-- atributos -->
+                        <div class="mb-3">
+                            <label class="form-label">Força</label>
+                            <input type="range" class="form-range"  min="1" max="10">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Inteligência</label>
+                            <input type="range" class="form-range" min="1" max="10">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Agilidade</label>
+                            <input type="range" class="form-range" min="1" max="10">
+                        </div>
+                        
+                        <!-- arma -->
+                        <div class="mb-3">
+                            <label class="form-label">Escolha sua arma inicial</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="arma" id="espada" required>
+                                <label class="form-check-label" for="espada">Espada</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="arma" id="arco" required>
+                                <label class="form-check-label" for="arco">Arco e Flecha</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="arma" id="cajado" required>
+                                <label class="form-check-label" for="cajado">Cajado</label>
+                            </div>
+                        </div>
+                        
+                        <!-- historia -->
+                        <div class="mb-3">
+                            <label for="historia" class="form-label">História do personagem</label>
+                            <textarea class="form-control" id="historia" rows="3" placeholder="Conte a história"></textarea>
+                        </div>
+                        
+                        <!-- botoes -->
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary">Criar Personagem</button>
+                            <button type="reset" class="btn btn-dark mt-2">Resetar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

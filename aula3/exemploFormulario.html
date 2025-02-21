@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo Formulário</title>
+</head>
+<body>
+    <form action="recebe.html" method="get">
+        <input type="text" name="cliente" id="cliente" value="pedro da silva" readonly>
+        <input type="hidden" name="oculto" value="abababa">
+        <label for="produto">Produto</label>
+        <input type="text" name="produto" id="produto" maxlength="10" minlength="3" autocomplete="on" autofocus required>
+        <br>
+        <label for="qtd">Quantidade</label>
+        <input type="number" name="qtd" id="qtd" autocomplete="off" min="1" max="100" step="" required>
+        <br>
+        <label for="valor">Preço</label>
+        <input type="number" name="valor" id="valor" step="0.01">
+        <br>
+        <input type="radio" name="tipo" value="atacado" checked>atacado
+        <input type="radio" name="tipo" value="varejo">varejo
+        <br>
+        <input type="checkbox" name="pagamento" value="pix" checked>Pix
+        <input type="checkbox" name="pagamento" value="dinheiro">Dinheiro
+        <input type="checkbox" name="pagamento" value="cartao">Cartão
+        <br>
+        <label for="entrega">Escolha uma forma de entrega:</label>
+        <select name="entrega" id="entrega" multiple="true">
+            <option value="sedex">Sedex</option>
+            <option value="padrao">Padrão</option>
+            <option value="retirada">Retirada</option>
+        </select>
+        <br><button>OK</button>
+    </form>
+</body>
+</html>

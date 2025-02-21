@@ -1,0 +1,119 @@
+ul li{
+    color: green;
+}
+
+a:link{
+    color: blue;
+}
+
+a:hover{
+    color: white;
+    background-color: black;
+}
+
+a:visited{
+    color: gray;
+}
+
+a:active{
+    color: orange;
+}
+
+h1{
+    font-size: 30px;
+    color: blue;
+}
+
+h2{
+    font-size: 20px;
+    color: dimgray;
+}
+
+h3{
+    font-size: 18px;
+    color: darkseagreen;
+}
+
+p{
+    border-style: solid;
+    border-color: black;
+    border-width: 5px;
+    border-radius: 10px;
+    margin: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 30px;
+    text-align: center;
+    width: 30%;
+    display: inline;
+}
+
+.fundoVermelho{
+    background-color: red;
+}
+
+.fundoVerde{
+    background-color: green;
+}
+
+.fundoAzul{
+    background-color: blue;
+}
+
+.destaque{
+    color: green;
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.caixatexto{
+    border-color: purple;
+    border-width: 3px;
+    border-style: solid;
+    margin: 30px;
+    margin-top: 15px;
+    padding: 30px;
+}
+
+.titulo{
+    border-color: rgb(0, 70, 0);
+    border-width: 5px;
+    border-style: solid;
+    color: white;
+    background-color: green;
+    font-size: 60px;
+    text-align: center;
+    height: 150px;
+}
+
+.linha1{
+    height: 200px;
+    color: black;
+    background-color: rgb(105, 255, 105);
+    border-color: rgb(141, 141, 141);
+    border-style: solid;
+    border-width: 10px;
+    font-size: 60px;
+    text-align: center;
+    width: 200px;
+}
+
+.linha2{
+    height: 200px;
+    color: black;
+    background-color: rgb(174, 255, 174);
+    border-color: rgb(141, 141, 141);
+    border-style: solid;
+    border-width: 10px;
+    font-size: 60px;
+    text-align: center;
+    width: 200px;
+}
+
+td:hover{
+    width: 400px;
+}
+
+tr:hover{
+    height: 400px;
+}
