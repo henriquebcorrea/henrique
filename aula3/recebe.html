@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recebe formulário</title>
+</head>
+
+<body>
+    <span id="dados"></span>
+    <script>
+        let dados = '';
+        const params = new URLSearchParams(window.location.search);
+        const produto = params.get("produto");
+        const qtd = params.get("qtd");
+        const tipo = params.get("tipo");
+        const pagamento = params.getAll("pagamento");
+        const entrega = params.getAll("entrega");
+        const valor = params.get("valor");
+
+        dados += "<b>Produto</b>: " + decodeURIComponent(produto) + "<br>";
+        dados += "<b>Quantidade</b>: " + decodeURIComponent(qtd) + "<br>";
+        dados += "<b>Tipo</b>: " + decodeURIComponent(tipo) + "<br>";
+        dados += "<b>Meios de pagamento: </b>"
+        
+
+        if(tipo == "atacado"){
+            dados += "<b>Preço Total:</b>:" + decodeURIComponent(valor * qtd * 0.9) + "<br>";
+        }else{
+            dados += "<b>Preço Total:</b>:" + decodeURIComponent(valor * qtd) + "<br>";
+        }
+
+
+        dados += "<b>Meios de pagamento: </b>"
+        if(pagamento.length > 0){
+            dados += "<ul>"
+            pagamento.forEach(pg =>{
+                dados += "<li>" + pg + "<li>";
+            })
+            dados += "</ul>"
+        }else{
+            dados += "Nenhum meio de pagamento selecionado";
+        }
+
+
+        if(entrega.length > 0){
+            dados += "<b>Entrega: </b>" + entrega;
+        }else{
+            dados += "Nenhuma forma de entrega selecionada";
+        }
+        document.getElementById("dados").innerHTML  = dados;
+    </script>
+</body>
+</html>
